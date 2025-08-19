@@ -1,0 +1,555 @@
+/* Reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scrolling */
+  box-sizing: border-box;
+  background-color: black;
+}
+
+/* Make all children respect border-box */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+header {
+  height: 100vh; /* full viewport height */
+  max-width: 100%;
+  position: relative;
+  overflow: hidden; /* keeps video clipped inside */
+}
+
+/* ===== Navigation & Menu ===== */
+.menu-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding:2px;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+.menu-bar-content:hover{
+  background-color:#7f78788f;
+  cursor: pointer;
+}
+
+.menu-bar {
+  width: 30px;
+  height: 30px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2px;
+}
+
+
+.textLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== Logo ===== */
+.logo-container {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===== Store Button ===== */
+.store-content {
+  display: flex;
+}
+.store-content button {
+  color: white;
+  display: flex;
+  align-items: center;
+  background-color: rgba(110, 110, 110, 0.197);
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.store-content #left-image {
+  fill: white;
+  width: 5rem;
+  height: 34px;
+}
+
+/* ===== Video ===== */
+#myVideo,
+.videoContainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ===== Overlay Content ===== */
+.content {
+  position: absolute;
+  top: 0;
+  color: #f1f1f1;
+  width: 100%;
+  /* width: calc(100% - 40px);  20px left + 20px right 
+  margin: 20px; */
+  padding: 20px;
+  box-sizing: border-box; /* ✅ fix padding overflow */
+}
+
+.center-content {
+  text-align: center;
+  top: 23rem;
+}
+
+.center-content img {
+  width: 35rem;
+  filter: brightness(0) invert(1);
+}
+
+.center-content button {
+  font-size: 1rem;
+  border: 2px solid whitesmoke;
+  background-color: rgba(120, 117, 117, 0.123);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.center-content button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.secondVideoContainer {
+  height: calc(100vh - 200px); /* full height minus top+bottom margin */
+  width: calc(100% - 200px); /* full width minus left+right margin */
+  margin: 100px; /* ✅ equal margin on all sides */
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: #f1f1f1;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.secondVideo-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondVideo-left-content {
+  width: 44rem;
+  font-size: 3rem;
+  word-spacing: 3px;
+  letter-spacing: 6px;
+  font-family: monospace;
+}
+
+.secondVideo-right-content {
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  font-size: 1rem;
+}
+.secondVideo-right-firstP {
+  width: 20rem;
+}
+
+.secondVideo-right-secondP a {
+  color: white;
+}
+
+.navContent {
+  height: calc(100vh - 200px); /* subtract only top */
+  width: calc(100% - 200px); /* subtract left+right */
+  margin: 200px 100px 0 100px; /* top right bottom left */
+}
+
+.heding-content {
+  color: #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 3rem;
+}
+.firstContent-image img {
+  width: 29rem;
+  border-radius: 5px;
+}
+
+.firstContent-text {
+  font-size: 1rem;
+  font-family: "Inter";
+}
+.firstContent-text h3 {
+  font-size: 2rem;
+}
+.allContent {
+  display: flex;
+  gap: 10rem;
+}
+.firstContent-text button {
+  border: none;
+  outline: none;
+  background-color: black;
+  font-size: 1rem;
+}
+.firstContent-text button a {
+  color: white;
+  font-family: auto;
+}
+
+.image-content-center img {
+  /* width: 35rem; */
+  filter: brightness(0) invert(1);
+}
+
+.collection-one {
+  position: relative;
+}
+
+.collection-card {
+  height: calc(100vh-200px);
+  width: calc(100vh-200px);
+  margin: 100px;
+  border: 2px solid #3f3939;
+  padding-bottom: 4rem;
+}
+.collection-first-row-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  object-fit: cover;
+  padding-top: 2rem;
+}
+
+.collection-card-heading {
+  color: white;
+  font-size: 3rem;
+  font-family: math;
+  margin-left: 6rem;
+}
+
+.collection-first-sport video {
+  width: 40rem;
+  height: 50rem;
+  /* position: relative; */
+}
+.collection-two {
+  position: relative;
+}
+
+.collection-first-sport-text {
+  position: absolute;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 10rem;
+}
+
+.collection-first-sport-text {
+  filter: brightness(0) invert(1);
+}
+
+.bugatti-logo-design {
+  height: calc(100vh-200px);
+  width: calc(100vh-200px);
+  margin: 100px;
+  padding-top: 2rem;
+  
+}
+.bugatti-logo-content-container {
+  height: 80vh;
+  border: 2px solid grey;
+  background-color: #1c1616;
+}
+.bugatti-logo-heading {
+  color: white;
+}
+.bugatti-logo-heading h1 {
+  font-size: 3rem;
+  font-family: monospace;
+  word-spacing: 5px;
+}
+.bugatti-logo-heading p {
+  font-size: 1rem;
+  font-family: "Inter";
+  word-spacing: 5px;
+}
+
+.bugatti-logo-content-container {
+  display: flex;
+}
+
+.bugatti-logo-design-image img {
+  height: 80vh;
+  width: 90vh;
+}
+.bugatti-logo-content-text p,
+h1 {
+  color: white;
+}
+.bugatti-logo-content-text h1 {
+  font-size: 4rem;
+  font-family: monospace;
+}
+.bugatti-logo-content-text p {
+  font-size: 2rem;
+  font-family: "Inter";
+}
+.bugatti-logo-content-text {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.bugatti-logo-content-text button {
+  bottom: 0;
+  width: 18rem;
+  margin-top: 18rem;
+  background-color: #1c1616;
+  border: none;
+  outline: none;
+  padding-bottom: 1rem;
+}
+
+.bugatti-logo-content-text button a {
+  color: white;
+}
+
+.bugatti-live-container{
+  height: calc(100vh-200px);
+  width: calc(100vh-200px);
+  margin: 100px;
+  padding-top: 3rem;
+}
+.bugatti-live-container-text h1{
+  margin-left: 5rem;
+  font-size: 50px;
+  word-spacing: 12px;
+}
+
+.bugatti-live-firstRow-image,.bugatti-live-secondRow-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.bugatti-live-first-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.first-svg-setter{
+  position: relative;
+  object-fit: cover;
+}
+
+.first-svg-setter .like-svg{
+   position: absolute;
+  padding-top: 35rem;
+  left: 1rem;
+color: white;
+width: 2rem; 
+}
+
+.msg-svg{
+  position: absolute;
+  padding-top: 35rem;
+  left: 5rem;
+color: white;
+width: 2rem;
+}
+
+.followers-like{
+  position: absolute;
+  padding-top: 35rem;
+  font-weight: 900;
+  left: 3rem;
+color: rgb(255, 255, 255);
+width: 2rem;
+}
+
+.msg-comment{
+  position: absolute;
+  padding-top: 35rem;
+  left: 7rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  width: 2rem;
+}
+
+.bugatti-live-firstRow-image img{
+  border-radius: 5px;
+  object-fit: cover;
+}
+.bugatti-live-secondRow-image img{
+  border-radius: 5px;
+  object-fit: cover;
+}
+.image-loader-setter{
+  display: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ .image-loader-setter .video-loader{  
+  width: 8rem;
+  position: absolute;
+  color: rgba(216, 205, 205, 0.778);
+}
+
+.image-loader-setter .video-loader:hover{
+  color: rgba(255, 255, 255, 0.936);
+}
+.bugatti-live-secondRow-image{
+  margin-top: 1rem;
+}
+
+.addSomePosts{
+  margin-top:5rem;
+  margin-left: 5rem;
+  text-align:center;
+}
+.addSomePosts button{
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius:25px;
+  border:2px solid white;
+  background-color:black;
+  color:white;
+}
+.addSomePosts button:hover{
+  background-color:white;
+  color:black;
+  cursor: pointer;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-column h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #aaa;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content:space-between;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.footer-bottom .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size:1.2rem;
+  /* justify-content: center; */
+}
+
+.footer-bottom .links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-bottom .links a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.social-icons .social-icons-svg{
+ /* color:white; */
+ width: 2rem;
+ height: 2rem;
+ background-color:white;
+ border-radius: 4px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.language {
+  margin-top: 10px;
+  margin-right: 18rem;
+}
+
+.language a {
+  color: #aaa;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.language a.active {
+  color: #fff;
+  font-weight: bold;
+}
+      
+.footer-bugatt-name{
+  opacity:40;
+   position:relative;
+   translate: translateY(2);
+}
